@@ -30,7 +30,7 @@ public class BlackJackPlayer {
         return score;
     }
 
-    public String getHand() {
+    public String hands() {
         return String.join(", ", hand.stream().map(c -> c.toString()).toList());
     }
 }

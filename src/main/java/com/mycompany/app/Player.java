@@ -13,7 +13,7 @@ public class Player extends BlackJackPlayer {
         var scanner = new Scanner(System.in);
         String res;
         do {
-            System.out.println("Player(" + this.score() + "): " + this.getHand());
+            System.out.println("Player(" + this.score() + "): " + this.hands());
             System.out.print("draw? y/n > ");
             res = scanner.nextLine();
             System.out.println(res);

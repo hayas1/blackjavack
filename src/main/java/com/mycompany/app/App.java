@@ -9,7 +9,7 @@ public class App {
     public static void main(String[] args) {
         var deck = Dealer.initDeck();
         var dealer = new Dealer(deck);
-        System.out.println(dealer.getHand(true));
+        System.out.println(dealer.hands(true));
         var player = new Player(deck);
         player.play();
 
