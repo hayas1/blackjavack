@@ -25,9 +25,8 @@ public class Dealer extends BlackJackPlayer {
     public void play() {
         while (score() < 17) {
             super.drawCard();
+            System.out.println(this.status(false));
         }
     }
-
-    
 }
 

@@ -49,6 +49,10 @@ public class BlackJackPlayer {
     }
 
     public String status(boolean upHand) {
-        return name + "(" + this.score() + "): " + this.hands(upHand);
+        if (upHand) {
+            return name + "(***): " + this.hands(upHand);
+        } else {
+            return name + "(" + this.score() + "): " + this.hands(upHand);
+        }
     }
 }
