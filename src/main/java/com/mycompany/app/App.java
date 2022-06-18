@@ -7,6 +7,9 @@ package com.mycompany.app;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello Remote World!");
+        var card = new Card(Card.CLUB, 10);
+        System.out.println(card);
+        var card2 = new Card(Card.CLUB, 1);
+        System.out.println(card2);
     }
 }
