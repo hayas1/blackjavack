@@ -5,15 +5,14 @@
 
 package com.mycompany.app;
 
-
 public class App {
     public static void main(String[] args) {
-        var dealer = new Dealer(Dealer.initDeck());
-        System.out.println(dealer.deck);
-        var p1 = new BlackJackPlayer(dealer.deck);
-        System.out.println(p1.score());
-        System.out.println( p1.getHand());
-        System.out.println(p1.deck);
+        var deck = Dealer.initDeck();
+        var dealer = new Dealer(deck);
+        System.out.println(dealer.getHand(true));
+        var player = new Player(deck);
+        player.play();
 
     }
+
 }
