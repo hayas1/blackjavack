@@ -9,7 +9,11 @@ public class BlackJackPlayer {
 
     public BlackJackPlayer(List<Card> deck) {
         this.deck = deck;
-        this.hand.add(deck.remove(deck.size() - 1));
+        this.drawCard();
+        this.drawCard();
+    }
+
+    public void drawCard() {
         this.hand.add(deck.remove(deck.size() - 1));
     }
 
