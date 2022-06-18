@@ -7,12 +7,18 @@ package com.mycompany.app;
 
 public class App {
     public static void main(String[] args) {
-        var deck = Dealer.initDeck();
-        var dealer = new Dealer(deck);
-        System.out.println(dealer.hands(true));
-        var player = new Player(deck);
-        player.play();
+        playBlackjack();
+    }
 
+    public static void playBlackjack() {
+        var deck = Dealer.initDeck();
+        System.out.println("---first hand---");
+        var dealer = new Dealer(deck);
+        System.out.println(dealer.status(true));
+        var player = new Player(deck);
+        System.out.println(player.status(false));
+        System.out.println("---start blackjack---");
+        player.play();
     }
 
 }

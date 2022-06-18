@@ -7,6 +7,7 @@ import java.util.List;
 public class Dealer extends BlackJackPlayer {
     public Dealer(List<Card> deck) {
         super(deck);
+        super.name = "Dealer";
     }
 
     public static ArrayList<Card> initDeck() {
@@ -22,25 +23,11 @@ public class Dealer extends BlackJackPlayer {
 
     @Override
     public void play() {
-        while (score() < 15) {
+        while (score() < 17) {
             super.drawCard();
         }
     }
 
-    public String hands(boolean upHand) {
-        if (upHand) {
-            var hands = new ArrayList<String> ();
-            for (int i = 0; i < this.hand.size(); i++) {
-                if (i > 0) {
-                    hands.add("***");
-                } else {
-                    hands.add(this.hand.get(i).toString());
-                }
-            }
-            return String.join(", ", hands);
-        } else {
-            return String.join(", ", hand.stream().map(c -> c.toString()).toList());
-        }
-    }
+    
 }
 
