@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Player extends BlackJackPlayer {
     public Player(List<Card> deck) {
         super(deck);
-        super.name = "Player";
+        this.name = "Player";
     }
 
     @Override
@@ -17,12 +17,12 @@ public class Player extends BlackJackPlayer {
             System.out.print("draw? y/n > ");
             res = scanner.nextLine();
             if (res.equals("y")) {
-                this.drawCard();
-                System.out.println(this.status(false));
+                drawCard();
+                System.out.println(status(false));
             } else {
                 break;
             }
-        } while (super.score() <= 21);
+        } while (score() <= 21);
         scanner.close();
     }
 }

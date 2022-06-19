@@ -38,11 +38,11 @@ public class Card {
     }
 
     public Suit getSuit() {
-        return this.suit;
+        return suit;
     }
 
     public int getNumber() {
-        return this.number;
+        return number;
     }
 
     public String toString() {

@@ -7,7 +7,7 @@ import java.util.List;
 public class Dealer extends BlackJackPlayer {
     public Dealer(List<Card> deck) {
         super(deck);
-        super.name = "Dealer";
+        this.name = "Dealer";
     }
 
     public static ArrayList<Card> initDeck() {
@@ -23,9 +23,10 @@ public class Dealer extends BlackJackPlayer {
 
     @Override
     public void play() {
+        System.out.println(status(false));
         while (score() < 17) {
-            super.drawCard();
-            System.out.println(this.status(false));
+            drawCard();
+            System.out.println(status(false));
         }
     }
 }
