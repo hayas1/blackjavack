@@ -24,10 +24,20 @@ public class Dealer extends BlackJackPlayer {
     @Override
     public void play() {
         System.out.println(status(false));
-        while (score() < 17) {
-            drawCard();
+        do {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            if (score() < 17) {
+                drawCard();
+            } else {
+                break;
+            }
             System.out.println(status(false));
-        }
+        } while (true);
     }
 }
 
